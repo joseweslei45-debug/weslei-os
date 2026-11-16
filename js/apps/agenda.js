@@ -98,7 +98,8 @@ export default {
     function renderDias() {
       const dias = proximosDias();
       if (!estado.dia || !dias.some((d) => d.toDateString() === estado.dia.toDateString())) {
-        estado.dia = dias.find((d) => prof().dias.includes(d.getDay())) || dias[0];
+        estado.dia =
+          dias.find((d) => gradeDoDia(prof(), servico(), d, estado.agendamentos, agora()).some((s) => s.status === 'livre')) || dias[0];
       }
       $('.dias').replaceChildren(
         ...dias.map((d) => {
