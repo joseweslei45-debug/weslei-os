@@ -1,0 +1,13 @@
+{
+  "name": "weslei-os",
+  "version": "1.0.0",
+  "description": "Portfólio interativo em forma de sistema operacional no navegador",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "test": "node --test"
+  },
+  "author": "Weslei Sousa",
+  "license": "MIT"
+}

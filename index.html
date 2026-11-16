@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Weslei OS — portfólio interativo</title>
+  <meta name="description" content="Um sistema operacional no navegador onde cada app é um projeto real de Weslei Sousa." />
+  <meta name="theme-color" content="#0a0a0c" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23ff2d3d'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='white' font-family='Arial' font-weight='900'>W</text></svg>" />
+  <link rel="stylesheet" href="css/os.css" />
+</head>
+<body>
+  <div id="boot" class="boot" role="status" aria-live="polite">
+    <pre id="boot-log"></pre>
+    <p class="boot-dica">clique para pular</p>
+  </div>
+
+  <main id="desktop" class="desktop" aria-label="Área de trabalho">
+    <div class="marca-dagua" aria-hidden="true">W<span>OS</span></div>
+    <ul id="icones" class="icones"></ul>
+  </main>
+
+  <nav id="menu-iniciar" class="menu-iniciar" hidden aria-label="Menu iniciar">
+    <div class="menu-topo">
+      <div class="avatar">W</div>
+      <div>
+        <strong>Weslei Sousa</strong>
+        <small>Dev em formação · ADS</small>
+      </div>
+    </div>
+    <ul id="menu-apps"></ul>
+    <div class="menu-rodape">
+      <a href="https://github.com/joseweslei45-debug" target="_blank" rel="noopener">GitHub ↗</a>
+      <button id="btn-desligar" type="button">⏻ Desligar</button>
+    </div>
+  </nav>
+
+  <footer class="barra-tarefas">
+    <button id="btn-iniciar" class="btn-iniciar" type="button" aria-label="Abrir menu iniciar" aria-expanded="false">W</button>
+    <div id="tarefas" class="tarefas"></div>
+    <div class="bandeja">
+      <span title="Quixadá, Ceará">📍 Quixadá</span>
+      <time id="relogio"></time>
+    </div>
+  </footer>
+
+  <div id="desligado" class="desligado" hidden>
+    <p>Obrigado pela visita 👋</p>
+    <small>É seguro fechar esta aba agora.</small>
+    <button id="btn-religar" type="button">⏻ Ligar novamente</button>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
